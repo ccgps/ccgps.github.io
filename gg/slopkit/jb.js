@@ -32,14 +32,14 @@ const STOP_BEFORE_DOUBLE = params.get("stop") === "beforedouble";
 function hostOk() {
   var m = document.getElementById("msgs");
   if (m) {
-    m.innerHTML = "GoldHEN v2.4b18.12 Loaded ...";
+    m.innerHTML = "GoldHEN v2.4b18.12 Loaded, Tekan Logo PS Sekali ...";
   }
 }
 
 function hostFail() {
   var m = document.getElementById("msgs");
   if (m) {
-    m.innerHTML = "Failed to Load! Restart Your Console ...";
+    m.innerHTML = "Failed Load! Restart PS4 ...";
     m.style.color = "yellow";
   }
 }
@@ -47,7 +47,7 @@ function hostFail() {
 function hostAlready() {
   var m = document.getElementById("msgs");
   if (m) {
-    m.innerHTML = "GoldHEN is Already Loaded ...";
+    m.innerHTML = "GoldHEN Sudah Siap, Tekan Logo PS Sekali ...";
   }
 }
 

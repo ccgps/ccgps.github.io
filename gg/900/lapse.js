@@ -1830,7 +1830,7 @@ function runPayload(PLfile) {
 }
 
 function hostFail() {
-    msgs.innerHTML = "Gagal Load! Restart PS4 ...";
+    msgs.innerHTML = "Gagal Memuat! Restart PS4 ...";
     msgs.style.color = "yellow";
 }
 

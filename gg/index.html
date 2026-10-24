@@ -13,12 +13,12 @@ var fwVersion = isPS4 ? match[1] : "Unknown";
 var fwNum = parseFloat(fwVersion);
 
 function onScriptError() {
-    msgs.innerHTML = "Content not Found! - Clear Browser Data and Re-Install Cache ...";
+    msgs.innerHTML = "Konten tidak ditemukan! - Clear Browser Data & Re-Install Cache ...";
 }
 
 if (!isPS4) {
     document.addEventListener("DOMContentLoaded", () => {
-        msgs.innerHTML = "Only for PS4 with Firmware 5.05 and 7.00 to 13.52";
+        msgs.innerHTML = "Hanya Untuk PS4 Firmware 5.05 - 13.52";
     });
 } else {
     if (window.applicationCache.status == '0') {
@@ -34,7 +34,7 @@ if (!isPS4) {
             window.location.replace("cacheslopkit.html");
         } else {
             document.addEventListener("DOMContentLoaded", () => {
-                msgs.innerHTML = 'Unsupported Firmware: <span style="color: red;">' + fwVersion + '</span>';
+                msgs.innerHTML = 'Firmware Tidak Support: <span style="color: red;">' + fwVersion + '</span>';
             });
         }
     } else {
@@ -96,7 +96,7 @@ if (!isPS4) {
 <h1>PS4 5.05 - 13.52 FW GoldHEN Host</h1>
 <hr>
 <br>
-<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading GoldHEN v2.4b18.12... Please Wait</h1>
+<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading GoldHEN v2.4b18.12... Mohon Tunggu</h1>
 <h1 style="margin-top: 43px;">Special Thanks to: TheFloW · SpecterDev · ChendoChap · Znullptr · Sleirsgoevy · SiSTRo · Feyzee
       <br>
       And everyone who helps improve the PS4 scene

@@ -111,10 +111,10 @@ async function doJb() {
       load_bin(bin_u8);
     }
 
-    msgs.innerHTML = "GoldHEN v2.4b18.12 Loaded, Tekan Tombol Logo PS sekali ...";
+    msgs.innerHTML = "GoldHEN v2.4b18.12 Berhasil, Tekan Tombol Logo PS sekali ...";
     logger.info("===END===");
   } catch (e) {
-    msgs.innerHTML = "Gagal Load! Restart PS4 ...";
+    msgs.innerHTML = "Gagal Memuat! Restart PS4 ...";
     msgs.style.color = "yellow";
   }
 }

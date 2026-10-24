@@ -1712,7 +1712,7 @@ export async function kexploit() {
   }
 
   if (localStorage.ExploitLoaded === "yes" && sessionStorage.ExploitLoaded != "yes") {
-    msgs.innerHTML = "GoldHEN Sudah Siap, Tekan Logo PS Sekali ...";
+    msgs.innerHTML = "GoldHEN Sudah Siap, Tekan Tombol Logo PS Sekali ...";
     return new Promise(() => {});
   }
 
@@ -1884,7 +1884,7 @@ kexploit().then(() => {
     setTimeout(() => {
         try {
             runPayload("./goldhen_2.4b18.12.bin");
-            msgs.innerHTML = "GoldHEN v2.4b18.12 Berhasil, Tekan Logo PS Sekali ...";
+            msgs.innerHTML = "GoldHEN v2.4b18.12 Berhasil, Tekan Tombol Logo PS Sekali ...";
         } catch (e) {
             hostFail();
         }

@@ -1,20 +1,3 @@
-/* ===== DARK GLASSMORPHISM ===== */
-
-:root {
-    --bg: #070b12;
-    --glass: rgba(10, 18, 31, 0.78);
-    --glass-hover: rgba(15, 42, 68, 0.88);
-    --blue: #168cff;
-    --cyan: #00d9ff;
-    --border: rgba(75, 170, 255, 0.24);
-    --text: #eaf4ff;
-    --muted: #9bafc6;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 html {
     min-height: 100%;
     background-color: var(--bg);

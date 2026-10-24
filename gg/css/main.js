@@ -53,7 +53,7 @@ async function doJb() {
     }
 
     if (fn.setuid.invoke(0) !== -1) {
-      msgs.innerHTML = "GoldHEN Sudah Siap ...";
+      msgs.innerHTML = "GoldHEN Sudah Siap, Tekan Logo PS Sekali ...";
       return;
     }
 

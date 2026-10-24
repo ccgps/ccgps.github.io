@@ -39,7 +39,7 @@ function hostOk() {
 function hostFail() {
   var m = document.getElementById("msgs");
   if (m) {
-    m.innerHTML = "Failed Load! Restart PS4 ...";
+    m.innerHTML = "Gagal Load! Restart PS4 ...";
     m.style.color = "yellow";
   }
 }

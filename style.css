@@ -1,46 +1,24 @@
 html {
-    min-height: 100%;
-    background-color: var(--bg);
-    background-image:
-        linear-gradient(
-            rgba(4, 9, 18, 0.68),
-            rgba(4, 9, 18, 0.84)
-        ),
-        url("img.png");
+    background-image: url('img.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color: var(--text);
+    background-color: #24272b;
+    color: white;
     text-align: center;
-    font-family: "Segoe UI", Arial, sans-serif;
+    overflow: hidden;
 }
-
-body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px 14px;
-}
-
-/* ===== HEADING ===== */
 
 h1 {
-    margin: 18px 0 24px;
-    color: var(--text);
-    font-size: clamp(22px, 4vw, 30px);
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-shadow: 0 0 16px rgba(0, 140, 255, 0.3);
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-size: 25px;
+    color: white;
 }
-
-/* ===== LINKS ===== */
 
 a {
-    color: var(--cyan);
     text-decoration: none;
 }
-
-/* ===== SECTION VISIBILITY ===== */
 
 #progress {
     display: block;
@@ -50,132 +28,64 @@ a {
     display: block;
 }
 
-#crypto,
-#tools,
-#lnx,
+#crypto {
+    display: none;
+}
+
+#tools {
+    display: none;
+}
+
+#lnx {
+    display: none;
+}
+
 #mods {
     display: none;
 }
 
-/* ===== GLASS BUTTON ===== */
-
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
+    background-color: #003263;
+    color: white;
     width: 227px;
-    max-width: 100%;
-    min-height: 46px;
-    margin: 7px 5px;
-    padding: 10px 14px;
-
-    color: var(--text);
-    background: var(--glass);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 600;
+    height: 46px;
+    padding-bottom: 5px;
     text-align: center;
-
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-
-    box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.22),
-        inset 0 1px 0 rgba(255, 255, 255, 0.035);
-
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-style: none;
+    transition-duration: 0.4s;
     cursor: pointer;
-
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+    border-radius: 4px;
 }
-
-/* ===== BLUE NEON ===== */
 
 .btn:hover {
-    color: #ffffff;
-    background: var(--glass-hover);
-    border-color: rgba(0, 190, 255, 0.65);
-    box-shadow:
-        0 0 14px rgba(0, 140, 255, 0.14),
-        inset 0 0 12px rgba(0, 140, 255, 0.06);
+    background-color: #0069d9;
 }
-
-.btn:active {
-    background: rgba(0, 100, 190, 0.35);
-}
-
-/* ===== ONLINE ===== */
 
 .btn-onln {
-    background: rgba(9, 47, 39, 0.78);
-    border-color: rgba(54, 220, 155, 0.25);
+    background-color: #076300;
 }
 
 .btn-onln:hover {
-    background: rgba(12, 76, 57, 0.88);
-    border-color: rgba(54, 255, 170, 0.6);
-    box-shadow: 0 0 14px rgba(0, 255, 153, 0.12);
+    background-color: #18891b;
 }
 
-/* ===== TOOLBOX ===== */
-
 .btn-toolbox {
-    background: rgba(57, 25, 25, 0.8);
-    border-color: rgba(255, 100, 90, 0.25);
+    background-color: #ae2301;
 }
 
 .btn-toolbox:hover {
-    background: rgba(91, 34, 30, 0.9);
-    border-color: rgba(255, 115, 95, 0.6);
-    box-shadow: 0 0 14px rgba(255, 80, 60, 0.12);
+    background-color: #d42a01;
 }
 
-/* ===== MULTI ===== */
-
 .btn-multi {
-    background: rgba(54, 44, 17, 0.8);
-    border-color: rgba(255, 202, 70, 0.25);
+    background-color: #b8860b;
 }
 
 .btn-multi:hover {
-    background: rgba(87, 67, 19, 0.9);
-    border-color: rgba(255, 210, 80, 0.6);
-    box-shadow: 0 0 14px rgba(255, 195, 40, 0.12);
+    background-color: #daa520;
 }
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 520px) {
-    body {
-        padding: 14px 10px;
-    }
-
-    h1 {
-        margin: 14px 0 20px;
-    }
-
-    .btn {
-        width: 100%;
-        max-width: 340px;
-        min-height: 44px;
-        margin: 5px auto;
-        font-size: 15px;
-    }
-}
-
-/* ===== ACCESSIBILITY ===== */
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        transition: none !important;
-    }
-}
-```

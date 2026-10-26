@@ -1,42 +1,23 @@
 html {
-    min-height: 100%;
-    background: #080d18 url('img.png') center / cover fixed no-repeat;
-    color: #fff;
+    background-image: url('img.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #24272b;
+    color: white;
     text-align: center;
-    overflow-x: hidden;
+    overflow: hidden;
 }
-
-body {
-    margin: 0;
-    padding: 25px 12px;
-    min-height: 100vh;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgba(5, 9, 20, 0.55);
-}
-
-/* ===== HEADER ===== */
 
 h1 {
-    font-size: 26px;
-    letter-spacing: 2px;
-    color: #fff;
-    text-shadow: 0 0 8px #00eaff;
-    animation: titleBlink 3s infinite;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-size: 25px;
+    color: white;
 }
 
-@keyframes titleBlink {
-    50% { opacity: 0.78; }
-}
-
-/* ===== MENU LAYOUT ===== */
-
-#menu,
-#crypto,
-#tools,
-#lnx,
-#mods {
-    padding: 15px 5px;
+a {
+    text-decoration: none;
 }
 
 #progress {
@@ -47,150 +28,64 @@ h1 {
     display: block;
 }
 
-#crypto,
-#tools,
-#lnx,
+#crypto {
+    display: none;
+}
+
+#tools {
+    display: none;
+}
+
+#lnx {
+    display: none;
+}
+
 #mods {
     display: none;
 }
 
-/* ===== NEON MENU CARDS ===== */
-
 .btn {
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    vertical-align: middle;
-
-    width: 225px;
-    min-height: 88px;
-    padding: 17px 12px;
-    margin: 9px 7px;
-
-    color: #fff;
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    background-color: #003263;
+    color: white;
+    width: 227px;
+    height: 46px;
+    padding-bottom: 5px;
     text-align: center;
-
-    background: rgba(10, 25, 48, 0.78);
-    border: 1px solid rgba(0, 234, 255, 0.45);
-    border-radius: 14px;
-
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.3),
-        inset 0 0 15px rgba(0, 234, 255, 0.04);
-
-    transition: background-color 0.25s,
-                border-color 0.25s,
-                box-shadow 0.25s;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-style: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-/* Garis neon bagian atas */
-
-.btn::before {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 42px;
-    margin: 0 auto 12px;
-    background: #00eaff;
-    border-radius: 10px;
-    box-shadow: 0 0 8px #00eaff;
+.btn:hover {
+    background-color: #0069d9;
 }
-
-/* Hover / focus */
-
-.btn:hover,
-.btn:focus {
-    background: rgba(0, 125, 180, 0.35);
-    border-color: #00eaff;
-    box-shadow:
-        0 0 12px rgba(0, 234, 255, 0.3),
-        inset 0 0 15px rgba(0, 234, 255, 0.08);
-    outline: none;
-}
-
-/* ===== ONLINE : GREEN ===== */
 
 .btn-onln {
-    background: rgba(8, 50, 36, 0.82);
-    border-color: rgba(48, 255, 140, 0.5);
+    background-color: #076300;
 }
 
-.btn-onln::before {
-    background: #39ff88;
-    box-shadow: 0 0 8px #39ff88;
+.btn-onln:hover {
+    background-color: #18891b;
 }
-
-.btn-onln:hover,
-.btn-onln:focus {
-    background: rgba(10, 115, 65, 0.45);
-    border-color: #39ff88;
-    box-shadow: 0 0 14px rgba(57, 255, 136, 0.3);
-}
-
-/* ===== TOOLBOX : RED ===== */
 
 .btn-toolbox {
-    background: rgba(60, 20, 28, 0.82);
-    border-color: rgba(255, 75, 95, 0.55);
+    background-color: #ae2301;
 }
 
-.btn-toolbox::before {
-    background: #ff496c;
-    box-shadow: 0 0 8px #ff496c;
+.btn-toolbox:hover {
+    background-color: #d42a01;
 }
-
-.btn-toolbox:hover,
-.btn-toolbox:focus {
-    background: rgba(145, 25, 48, 0.45);
-    border-color: #ff496c;
-    box-shadow: 0 0 14px rgba(255, 73, 108, 0.3);
-}
-
-/* ===== MULTI : GOLD ===== */
 
 .btn-multi {
-    background: rgba(55, 43, 13, 0.82);
-    border-color: rgba(255, 207, 64, 0.55);
+    background-color: #b8860b;
 }
 
-.btn-multi::before {
-    background: #ffcf40;
-    box-shadow: 0 0 8px #ffcf40;
+.btn-multi:hover {
+    background-color: #daa520;
 }
-
-.btn-multi:hover,
-.btn-multi:focus {
-    background: rgba(125, 90, 10, 0.45);
-    border-color: #ffcf40;
-    box-shadow: 0 0 14px rgba(255, 207, 64, 0.3);
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 500px) {
-    h1 {
-        font-size: 21px;
-        letter-spacing: 1px;
-    }
-
-    .btn {
-        width: min(100%, 320px);
-        min-height: 72px;
-        margin: 7px auto;
-        font-size: 15px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    h1 {
-        animation: none;
-    }
-
-    .btn {
-        transition: none;
-    }
-}
-```

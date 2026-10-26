@@ -1,24 +1,47 @@
+```css
+/* ================================
+   DARK GLASSMORPHISM NEON
+   ================================ */
+
 html {
+    min-height: 100%;
     background-image: url('img.png');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: #24272b;
-    color: white;
+    background-color: #10131a;
+    color: #ffffff;
     text-align: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
+body {
+    margin: 0;
+    padding: 20px 12px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(5, 8, 18, 0.38);
+}
+
+/* Judul neon */
+
 h1 {
-    text-shadow: 0.1em 0.1em 0.2em black;
+    color: #ffffff;
     font-size: 25px;
-    color: white;
+    text-shadow:
+        0 0 5px #00eaff,
+        0 0 12px rgba(0, 234, 255, 0.65),
+        0 2px 5px #000000;
+    animation: neonBlink 3s ease-in-out infinite;
 }
 
 a {
     text-decoration: none;
 }
+
+/* Tampilan menu */
 
 #progress {
     display: block;
@@ -28,64 +51,152 @@ a {
     display: block;
 }
 
-#crypto {
-    display: none;
-}
-
-#tools {
-    display: none;
-}
-
-#lnx {
-    display: none;
-}
-
+#crypto,
+#tools,
+#lnx,
 #mods {
     display: none;
 }
 
+/* Tombol glassmorphism */
+
 .btn {
-    background-color: #003263;
-    color: white;
+    display: inline-block;
+    box-sizing: border-box;
+
     width: 227px;
-    height: 46px;
-    padding-bottom: 5px;
+    max-width: 100%;
+    min-height: 46px;
+    padding: 11px 12px;
+
+    margin: 8px 5px;
+
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
-    font-size: 20px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-style: none;
-    transition-duration: 0.4s;
+
+    background: rgba(0, 35, 65, 0.48);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(0, 225, 255, 0.48);
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.12),
+        0 0 8px rgba(0, 225, 255, 0.08);
+
     cursor: pointer;
-    border-radius: 4px;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
+
+/* Hover tombol utama */
 
 .btn:hover {
-    background-color: #0069d9;
+    background: rgba(0, 140, 220, 0.35);
+    border-color: #00eaff;
+
+    box-shadow:
+        0 0 8px rgba(0, 234, 255, 0.45),
+        0 0 18px rgba(0, 234, 255, 0.2),
+        inset 0 0 8px rgba(0, 234, 255, 0.08);
 }
 
+/* Tombol Online - Hijau Neon */
+
 .btn-onln {
-    background-color: #076300;
+    background: rgba(7, 99, 0, 0.38);
+    border-color: rgba(57, 255, 100, 0.55);
 }
 
 .btn-onln:hover {
-    background-color: #18891b;
+    background: rgba(24, 137, 27, 0.45);
+    border-color: #39ff64;
+
+    box-shadow:
+        0 0 8px rgba(57, 255, 100, 0.5),
+        0 0 18px rgba(57, 255, 100, 0.2);
 }
 
+/* Tombol Toolbox - Merah Neon */
+
 .btn-toolbox {
-    background-color: #ae2301;
+    background: rgba(174, 35, 1, 0.38);
+    border-color: rgba(255, 75, 45, 0.55);
 }
 
 .btn-toolbox:hover {
-    background-color: #d42a01;
+    background: rgba(212, 42, 1, 0.45);
+    border-color: #ff593d;
+
+    box-shadow:
+        0 0 8px rgba(255, 75, 45, 0.5),
+        0 0 18px rgba(255, 75, 45, 0.2);
 }
 
+/* Tombol Multi - Gold Neon */
+
 .btn-multi {
-    background-color: #b8860b;
+    background: rgba(184, 134, 11, 0.35);
+    border-color: rgba(255, 215, 0, 0.55);
 }
 
 .btn-multi:hover {
-    background-color: #daa520;
+    background: rgba(218, 165, 32, 0.4);
+    border-color: #ffd700;
+
+    box-shadow:
+        0 0 8px rgba(255, 215, 0, 0.45),
+        0 0 18px rgba(255, 215, 0, 0.2);
 }
+
+/* Animasi kedip sederhana */
+
+@keyframes neonBlink {
+    0%, 100% {
+        text-shadow:
+            0 0 5px #00eaff,
+            0 0 12px rgba(0, 234, 255, 0.65),
+            0 2px 5px #000000;
+    }
+
+    50% {
+        text-shadow:
+            0 0 2px #00eaff,
+            0 0 5px rgba(0, 234, 255, 0.25),
+            0 2px 5px #000000;
+    }
+}
+
+/* Responsif untuk layar kecil */
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 21px;
+    }
+
+    .btn {
+        width: min(100%, 320px);
+        min-height: 44px;
+        margin: 6px auto;
+        font-size: 16px;
+    }
+}
+
+/* Kurangi animasi jika diminta perangkat */
+
+@media (prefers-reduced-motion: reduce) {
+    h1 {
+        animation: none;
+    }
+
+    .btn {
+        transition: none;
+    }
+}
+```

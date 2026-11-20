@@ -53,7 +53,7 @@ async function doJb() {
     }
 
     if (fn.setuid.invoke(0) !== -1) {
-      msgs.innerHTML = "GoldHEN is Already Loaded ...";
+      msgs.innerHTML = "GoldHEN Telah Berhasil ...";
       return;
     }
 
@@ -111,10 +111,10 @@ async function doJb() {
       load_bin(bin_u8);
     }
 
-    msgs.innerHTML = "GoldHEN v2.4b18.14 Loaded ...";
+    msgs.innerHTML = "GoldHEN v2.4b18.14 Berhasil, Tekan Tombol Logo PS Sekali ...";
     logger.info("===END===");
   } catch (e) {
-    msgs.innerHTML = "Failed to Load! Restart Your Console ...";
+    msgs.innerHTML = "Gagal Memuat! Restart PS4 ...";
     msgs.style.color = "yellow";
   }
 }

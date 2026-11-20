@@ -681,7 +681,6 @@ PS4["14.02"] = Object.assign({}, PS4["14.00"], {
     "kernel=afterglow (apm-UAF, own kernel stage) payload=hen.bin|goldhen.bin",
 });
 
-
 export function offsetsFor(uaString) {
   const m = (uaString || "").match(/PlayStation\s+4[\/ ](\d+)\.(\d+)/);
   if (!m) return { key: null, off: null };

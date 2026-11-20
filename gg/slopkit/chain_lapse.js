@@ -36,14 +36,14 @@ const lines = [];
 function hostOk() {
     var m = document.getElementById("msgs");
     if (m) {
-        m.innerHTML = "GoldHEN v2.4b18.14 Loaded ...";
+        m.innerHTML = "GoldHEN v2.4b18.14 Berhasil, Tekan Tombol Logo PS Sekali ...";
     }
 }
 
 function hostFail() {
     var m = document.getElementById("msgs");
     if (m) {
-        m.innerHTML = "Failed to Load! Restart Your Console ...";
+        m.innerHTML = "Gagal Memuat! Restart PS4 ...";
         m.style.color = "yellow";
     }
 }
@@ -676,7 +676,7 @@ function makeRpc(worker) {
                 mark("ALREADY-ROOT", "getuid=" + uid0 + " setuid(0)=" + su0);
                 var m = document.getElementById("msgs");
                 if (m) {
-                    m.innerHTML = "GoldHEN is Already Loaded ...";
+                    m.innerHTML = "GoldHEN Telah Berhasil ...";
                 }
                 return;
             }

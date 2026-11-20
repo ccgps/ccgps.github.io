@@ -1696,7 +1696,7 @@ export async function kexploit() {
     }
     
     if (localStorage.ExploitLoaded === "yes" && sessionStorage.ExploitLoaded != "yes") {
-        msgs.innerHTML = "GoldHEN is Already Loaded ...";
+        msgs.innerHTML = "GoldHEN Telah Berhasil ...";
         return new Promise(() => {});
     }
  
@@ -1830,7 +1830,7 @@ function runPayload(PLfile) {
 }
 
 function hostFail() {
-    msgs.innerHTML = "Failed to Load! Restart Your Console ...";
+    msgs.innerHTML = "Gagal Memuat! Restart PS4 ...";
     msgs.style.color = "yellow";
 }
 
@@ -1838,7 +1838,7 @@ kexploit().then(() => {
     setTimeout(() => {
         try {
             runPayload("./goldhen_2.4b18.14.bin");
-            msgs.innerHTML = "GoldHEN v2.4b18.14 Loaded ...";
+            msgs.innerHTML = "GoldHEN v2.4b18.14 Berhasil, Tekan Tombol Logo PS Sekali ...";
         } catch (e) {
             hostFail();
         }

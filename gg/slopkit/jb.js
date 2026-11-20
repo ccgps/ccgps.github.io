@@ -32,7 +32,7 @@ const STOP_BEFORE_DOUBLE = params.get("stop") === "beforedouble";
 function hostOk() {
   var m = document.getElementById("msgs");
   if (m) {
-    m.innerHTML = "GoldHEN v2.4b18.12 Berhasil, Tekan Tombol Logo PS Sekali ...";
+    m.innerHTML = "GoldHEN v2.4b18.14 Berhasil, Tekan Tombol Logo PS Sekali ...";
   }
 }
 
